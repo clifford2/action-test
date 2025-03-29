@@ -2,7 +2,7 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
-  who-to-greet:  # id of input
+  who-to-greet:
     description: 'Who to greet'
     required: true
     default: 'World'
@@ -11,7 +11,9 @@ inputs:
     required: false
     default: ''
 outputs:
-  time: # id of output
+  greeting:
+    description: 'The greeting message'
+  time:
     description: 'The time we greeted you'
 runs:
   using: 'docker'
@@ -21,3 +23,4 @@ runs:
     - "${{ inputs.who-to-greet }}"
     - '-t'
     - "${{ inputs.my-title }}"
+    - '-d'

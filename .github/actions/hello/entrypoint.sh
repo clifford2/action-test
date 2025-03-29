@@ -36,10 +36,17 @@ then
 	echo "DEBUG: #args: $#" >&2
 	echo "DEBUG: who: [$who]" >&2
 	echo "DEBUG: title: [$title]" >&2
+	echo ''
+	echo '-- ENV start --'
+	env
+	echo '-- ENV end --'
+	echo ''
 fi
 
-echo "Hello ${title}${who}"
+greeting="Hello ${title}${who}"
+echo "${greeting}"
 
 time="$(date)"
+echo "greeting='${greeting}'" >> $GITHUB_OUTPUT
 echo "time='${time}'" >> $GITHUB_OUTPUT
 echo "hostname='$(hostname)'" >> $GITHUB_OUTPUT
