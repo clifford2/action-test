@@ -18,7 +18,6 @@ runs:
   image: 'Dockerfile'
   args:
     - '-w'
-    - "'${{ inputs.who-to-greet }}'"
+    - "${{ inputs.who-to-greet }}"
     - '-t'
-    - "'${{ inputs.my-title }}'"
-    - '-d'
+    - "${{ inputs.my-title }}"

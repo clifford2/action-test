@@ -18,3 +18,5 @@ jobs:
         run: echo "The time was [${{ steps.hello.outputs.time }}]"
       - name: Get the output hostname
         run: echo "The hostname was [${{ steps.hello.outputs.hostname }}]"
+      - name: Get missing output value
+        run: echo "The missing output was [${{ steps.hello.outputs.missing }}]"
