@@ -31,7 +31,7 @@ then
 	exit 1
 fi
 
-if [ $debug ]
+if [ $debug -gt 0 ]
 then
 	echo "DEBUG: #args: $#" >&2
 	echo "DEBUG: who: [$who]" >&2
